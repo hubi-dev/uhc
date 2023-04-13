@@ -34,8 +34,7 @@ public final class UhcPlugin extends JavaPlugin {
 
         Stream.of(
                 new PlayerJoinQuitListener(),
-                new PlayerDeathEvent(),
-                new TestDebug()
+                new PlayerDeathEvent()
         ).forEach(listener -> this.getServer().getPluginManager().registerEvents(listener, this));
         ScoreboardRunnable sidebarUpdateRunnable = new ScoreboardRunnable();
 
